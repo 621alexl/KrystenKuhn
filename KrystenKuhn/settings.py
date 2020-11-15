@@ -26,7 +26,7 @@ SECRET_KEY = 'txmd(!8*i5p8^_%ef#8ok2gxu&hdsny6z4=$_#z2b+@0nr44r='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'KrystenKuhn.pythonanywhere']
+ALLOWED_HOSTS = ['localhost', 'krystenkuhn.pythonanywhere.com']
 
 
 # Application definition
