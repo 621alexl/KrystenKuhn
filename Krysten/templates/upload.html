@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"><!-- Required meta tags -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row pt-5">
+        <div class="col">
+            <h1 class="display-4 text-primary">User Settings</h1>
+        </div>
+    </div>
+
+
+    <form method = "post" enctype="multipart/form-data"> 
+        {% csrf_token %} 
+        {{ form.as_p }} 
+        <button type="submit">Upload</button> 
+    </form> 
+<!--
+    <div class="row pb-2">
+        <div class="col-6">
+            <form method="POST" action="/Krysten/upload_description/">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label >Description:</label>
+                  <input type="text" class="form-control input-lg" name="description" value = {{krysten.description}}>
+                </div>
+        
+                <div class="form-group">
+                    <label >New Profile Picture:</label>
+                    <input type="file" class="form-control" name="new_image">
+                </div>
+
+                <button class="btn btn-outline-primary" type="submit">Upload Info</button>
+        
+        
+              </form>
+        </div>
+    </div>
+-->
+    <!--
+    <div class="row">
+        <div class="col-10">
+            <p class="text-primary font-weight-bold">Edit User Info</h2>
+            <form method="POST" action="/accounts/change_info/">
+                {% csrf_token %}
+                <label>Username:
+                    <input class="form-control" type = "text" name="username" value={{user.username}}>
+                </label>
+                <br>
+
+                <label>First Name:
+                    <input class="form-control" type = "text" name = "first_name" value = {{user.first_name}}>
+                </label>
+
+                <label>Last Name:
+                    <input class="form-control" type = "text" name="last_name" value = {{user.last_name}}>
+
+                </label>
+                <label>Email:
+                    <input class="form-control" type="text" name="email" value = {{user.email}}>
+                </label>
+
+                <button class="form-control" type="submit">Save Info</button>
+            </form>
+
+        </div>
+    </div>
+    -->
+
+</div>
+
+
+
+{% endblock %}
